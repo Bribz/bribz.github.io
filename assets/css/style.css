@@ -1,3 +1,18 @@
+:root {
+  --tonal_a0:#221d17;
+  --tonal_a1: #37322c;
+  --tonal_a2: #4d4843;
+  --tonal_a3: #645f5b;
+  --tonal_a4: #7c7874;
+  --tonal_a5: #95918e;
+  --primary_a0: #b0834c;
+  --primary_a1: #ba905f;
+  --primary_a2: #c39d72;
+  --primary_a3: #cdab85;
+  --primary_a4: #d6b899;
+  --primary_a5: #dec6ac;
+}
+
 .profile-pic {
   position: relative;
   max-width:130px;
@@ -11,7 +26,7 @@
   /* background-size: cover;  */
   margin: -31px; 
   margin-left:-7px;
-  border: 6px solid rgba(0, 77, 64, 0.4); 
+  border: 4px solid rgba(176, 131, 76, 1); 
   border-radius: 50% !important;
 }
 
@@ -84,15 +99,20 @@
 .readme {
   position: relative;
   padding: 11px 35px;
-  background: #fff;
-  color: #00796b;
-  border: 2px solid #fff;
+  /*background: #fff;*/
+  color: #fff;
+  background-color: var(--tonal_a2);
+  border: 0px solid #fff;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
   border-radius: 5px;
   -webkit-border-radius: 5px;
+}
+.readme:hover{
+  color: #000;
+  background-color: var(--primary_a2);
 }
 
 /* .readme:hover{
@@ -104,10 +124,11 @@
   position: relative;
   padding: 11px 35px;
   background: none;
+  background-color: var(--tonal_a2);
   color: #fff;
-  border: 2px solid #fff;
-  font-weight: 600;
-  font-size: 15px;
+  border: 0px solid #fff;
+  font-weight: 900;
+  font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
   margin-top: 1.5em;
@@ -116,15 +137,15 @@
 }
 
 .contactme:hover{
-  color: #00796b;
-  background-color: white;
+  color: #000;
+  background-color: var(--primary_a2);
 }
 /* main body */
 
 /* body-color */
 
 body {
-  color: #333;
+  color: #CCC;
   font-size: 18px;
 }
 
@@ -140,7 +161,7 @@ body {
 } */
 
 a {
-  color: #004d40;
+  color: var(--primary_a3);
 }
 
 /* main blockqoute */
@@ -175,7 +196,7 @@ blockquote * {
 /* main nav */
 
 nav {
-  background: white;
+  background: var(--tonal_a1);
   box-shadow: none;
   height: 0;
 }
@@ -221,6 +242,7 @@ dt {
 
 ul.side-nav {
   width: 190px;
+  background-color: var(--tonal_a1);
 }
 
 ul.side-nav li {
@@ -257,8 +279,8 @@ ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
 } */
 
 ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
+  background-color: #322e28;
+  border-bottom: 1px solid var(--tonal_a2);
   box-sizing: content-box;
   min-height: 90px;
   padding: 30px 30px 40px;
@@ -270,12 +292,12 @@ ul.side-nav.fixed li.logo a {
 }
 
 ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: #fafafa;
+  background-color: var(--tonal_a2);
   border-left: 3px solid;
 }
 
 ul.side-nav.fixed.table-of-contents li:not(.logo) a span, ul#slide-out li:not(.logo) a span {
-  color: #333 !important;
+  color: #fafafa !important;
 }
 
 li.logo span {
@@ -319,8 +341,13 @@ h3 {
   position: relative;
 } */
 
+.card .card-reveal {
+  background-color: var(--tonal_a4);
+}
+
+
 #intro.section {
-  background: #a7ffeb repeat;
+  background: var(--tonal_a0) repeat;
   position: relative;
 }
 
@@ -354,9 +381,22 @@ h3 {
 #intro.section .teal {
   padding: 0 10px;
 }
+#intro h2{
+  margin: 1rem 0 1.1rem 0;
+}
+#intro h4 {
+  margin: 1.1rem 0 1.4rem 0;
+}
+.title-text{
+  /*margin-top: 1.78rem !important;
+  margin-bottom: 1rem !important;*/
+}
+.subtitle-text {
+  color: var(--tonal_a4);
+}
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.15);
   height: 100%;
   left: 0;
   position: absolute;
@@ -367,11 +407,20 @@ h3 {
 .waves-effect.waves-blue .waves-ripple {
   /* The alpha value allows the text and background color
    of the button to still show through. */
-  background-color: rgba(33, 150, 243, 0.2);
+  background-color: rgba(33, 150, 243, 0.3);
 }
 
 .card {
   margin-bottom: 60px;
+  background-color: var(--tonal_a2);
+}
+
+.role{
+  color: var(--primary_a3);
+}
+
+.btn-large:hover {
+  background-color: var(--primary_a4);
 }
 
 .card .role {
@@ -428,7 +477,7 @@ h3 {
 
 .card-action span {
   font-size: 85%;
-  color: #666;
+  color: var(--primary_a3);
 }
 
 .card ul {
@@ -450,9 +499,6 @@ h3 {
   font-size: 24px;
 }
 
-.card .card-content .card-title {
-  line-height: 2.5rem;
-}
 
 .card i.right {
   margin-left: 10px;
@@ -473,7 +519,7 @@ a.hoverline {
 } */
 
 a.hoverline:hover {
-  border-bottom: 3px solid #004d40 !important;
+  border-bottom: 3px solid var(--primary_a1) !important;
 }
 
 #skills .card.large {
@@ -481,9 +527,14 @@ a.hoverline:hover {
 }
 
 #skills h4 {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--tonal_a4);
   margin-bottom: 30px;
   padding-bottom: 20px;
+}
+
+#skills .col {
+  width: 20%;
+  padding: 0 0.2rem;
 }
 
 #skills .col img.responsive-img {
@@ -518,6 +569,10 @@ a.hoverline:hover {
   height: 240px;
 }
 
+.btn-floating {
+  background-color: var(--primary_a0);
+}
+
 .card-action a.btn-floating {
   margin-bottom: 0;
 }
@@ -528,8 +583,13 @@ a.hoverline:hover {
   position: relative;
 }
 
+#experience .card a {
+  margin-right: 0px;
+}
 #experience .col.s12.m2 {
   text-align: center;
+  width: 12%;
+  padding: 0 0;
 }
 
 .fa-external-link:before {
@@ -549,7 +609,12 @@ small {
 /* main .teal-text */
 
 .teal-text {
-  color: #008073 !important;
+  color: var(--primary_a1) !important;
+}
+
+
+.pinkish-text {
+  color: #cb8080 !important; 
 }
 
 /* .teal-text {
@@ -559,7 +624,7 @@ small {
 /* .teal */
 
 .teal {
-  background-color: #008073 !important;
+  background-color: var(--primary_a1) !important;
 }
 
 /* .teal {
@@ -597,12 +662,12 @@ small {
     width: 100%;
   }
   nav {
-    background: #fff;
+    background: var(--tonal_a1);
     height: 64px;
     position: absolute;
   }
   nav a.button-collapse, nav a.button-collapse i {
-    color: #009688;
+    color: var(--primary_a3);
     height: 56px;
     line-height: 56px;
   }
@@ -618,6 +683,12 @@ small {
     position: fixed;
     top: 0;
     z-index: 2;
+  }
+  .compact-title-text{
+    color: var(--primary_a2);
+  }
+  .compact-subtitle-text{
+    color: var(--tonal_a4);
   }
   .name-title {
     display: block;
@@ -655,16 +726,29 @@ small {
 
 @media (max-width: 600px) {
   h2 {
-    font-size: 22px;
+    font-size: 32px;
+    line-height: 200%;
+    margin: 30px 0 0;
+  }
+  h4{
+    font-size: 24px;
+    line-height: 200%;
+    margin: 30px 0 0;
+  }
+  h5{
+    font-size: 24px;
     line-height: 200%;
     margin: 30px 0 0;
   }
   #intro.section .container *:not(span) {
-    padding: 0;
+    padding: 0 0;
+  }
+  .m2 {
+    margin-right: 0;
   }
   .card .card-content .card-title {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 0;
   }
   #experience span.card-title {
     text-align: center;
