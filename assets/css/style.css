@@ -115,6 +115,25 @@
   background-color: var(--primary_a2);
 }
 
+.projectsb {
+  position: relative;
+  padding: 11px 35px;
+  /*background: #fff;*/
+  color: #fff;
+  background-color: var(--tonal_a2);
+  border: 0px solid #fff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.projectsb:hover{
+  color: #000;
+  background-color: var(--primary_a2);
+}
+
 /* .readme:hover{
   color: white;
   background-color: #00796b;
